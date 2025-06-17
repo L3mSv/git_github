@@ -1,57 +1,57 @@
-# Git Kata: Basic Commits
-This kata will introduce you to the `git add` and `git commit` commands.
+# Basic Commits
+Este diretório vai introduzir você ao `git add` e ao `git commit` comandos.
 
-This is a very introductory kata. if you have used `git status`, `git log --oneline --graph`, `git add` and `git commit` extensively you should probably skip it.
+Isto é um diretório muito introdutório. Se você tem usado `git status`, `git log --oneline --graph`, `git add` e `git commit` extensivamente, então provavelmente você deveria pular este diretório.
 
-You can look at the bottom of this file, if you have not yet done basic git configuration.
+Você pode olhar no rodapé deste arquivo, se você ainda não configurou a configuração básica de git.
 
 ## Setup:
 
-1. Run `source setup.sh` (or `.\setup.ps1` in PowerShell)
+1. Execute `source setup.sh` (ou `.\setup.ps1` no PowerShell)
 
-## The task
+## Tarefa
 
-1. Use `git status` to see which branch you are on.
-2. What does `git log` look like?
-3. Create a file
-4. What does the output from `git status` look like now?
-5. `add` the file to the staging area
-6. How does `git status` look now?
-7. `commit` the file to the repository
-8. How does `git status` look now?
-9. Change the content of the file you created earlier
-10. What does `git status` look like now?
-11. `add` the file change
-12. What does `git status` look like now?
-13. Change the file again
-14. Make a `commit`
-15. What does the `status` look like now? The `log`?
-16. Add and commit the newest change
+1. Use `git status` para ver em qual branch você está.
+2. Ao executar `git log` o que aparece?
+3. Crie um arquivo
+4. O que aparece na saída de `git status` agora?
+5. `add` o arquivo para a área de preparação 
+6. Como parece `git status` agora?
+7. `commit` o arquivo para o repositório
+8. Como parece `git status` agora?
+9. Mude o conteúdo do arquivo que você criou mais cedo
+10. Como parece `git status` agora?
+11. `add` as mudanças do arquivo
+12. Como parece `git status` agora?
+13. Altere o arquivo novamente
+14. Faça um `commit`
+15. Como parece `git status` agora? O `log`?
+16. Adicione e commit a mais nova mudança
 
-## Useful commands
+## Comandos Úteis
 - `git add`
 - `git commit`
 - `git commit -m "My commit message"`
 - `git log`
-- `git log -n 5`
+- `git log -n 5` --Mostra os últimos 5 commits a partir do mais novo
 - `git log --oneline`
 - `git log --oneline --graph`
-- `touch filename` to create a file (or `sc filename ''` in PowerShell)
-- `echo content > file` to overwrite file with content (or `sc filename 'content'` in PowerShell)
-- `echo content >> file` to append file with content (or `ac filename 'content'` in PowerShell)
+- `touch filename` para criar um arquivo (ou `sc filename ''` no PowerShell)
+- `echo content > file` para sobrescrever o conteúdo de um arquivo (ou `sc filename 'content'` no PowerShell)
+- `echo content >> file` para anexar o conteúdo no arquivo (ou `ac filename 'content'` no PowerShell)
 
 
-## Git Initial Configuration
+## Configuração inicial do Git
 1. `git config --global user.name "John Doe"`
 1. `git config --global user.email "johndoe@example.com`
 
-For the vim scared:
+Para os traumatizados com vim:
 - `git config --global core.editor nano`
 
-For the windows peeps:
+Para os usuários de windows:
 - `git config --global core.editor notepad`
 
-Other editor options:
-- `git config --global core.editor "atom --wait"`
-- `git config --global core.editor "code --wait"`
-- `git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst"`
+Outras opcões de editores:
+- `git config --global core.editor "atom --wait"` --Atom
+- `git config --global core.editor "code --wait"` --VScode
+- `git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst"` --Notepad++
