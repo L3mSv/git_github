@@ -1,37 +1,38 @@
-# Git Kata: Basic Branching
+# Basic Branching
 
 ## Setup
 
-1. Run `source setup.sh` (or `.\setup.ps1` in PowerShell)
+1. Execute `source setup.sh` (ou `.\setup.ps1` no PowerShell)
 
-## The task
+## Tarefa
 
-You again live in your own branch, this time we will be doing a bit of juggling with branches, to show how lightweight branches are in git.
-Hint: `git switch` will make you switch from one branch to another.
+Você novamente vive somente na sua própria branch, nesse momento nós vamos fazer um pouco de malabarismo com branches, para te mostrar o quão simples é o manuseio de branches no git.
+Dica: `git switch` auxilia na troca entre branches.
 
-1. Use `git branch` to see the two branches that are relevant for this exercise
-2. What branch are you on?
-3. Use `git branch mybranch` to create a new branch called _mybranch_
-4. Use `git branch` again to see the new branch created.
-5. Use `git switch mybranch` to switch to your new branch.
-6. How does the output from `git status` change when you switch between the _master_ and the new branch that you have created?
-7. How does the workspace change when you change between the two branches?
-8. Make sure you are on your _mybranch_ branch before you continue.
-9. Create a file called `file1.txt` with your name.
-10. `Add` the file and `commit` with this change.
-11. Use `git log --oneline --graph` to see your branch pointing to the new commit.
-12. Switch back to the branch called _master_.
-13. Use `git log --oneline --graph` and notice how the commit you made on the _mybranch_ branch is missing on the _master_ branch.
-14. Make a new file called `file2.txt` and commit that file.
-15. Use `git log --oneline --graph --all` to see your branch pointing to the new commit, and that the two branches now have different commits on them.
-16. Switch to your branch _mybranch_.
-17. What happened to your working directory? Can you see your `file2.txt`?
-18. Use `git diff mybranch master` to see the difference between the two branches.
+1. Use `git branch` para ver as duas branches que são relevantes para este exercício
+2. Em que branch você está?
+3. Use `git branch mybranch` para criar uma nova branch chamada _mybranch_
+4. Use `git branch` novamente para ver a nova branch criada.
+5. Use `git switch mybranch` para trocar para a sua nova branch.
+6. Como fica a saída do `git status` alterado quando você troca entre a _master_ e a nova branch que você criou?
+7. Como fica as mudanças no diretório de trabalho quando você muda entre as duas branches?
+8. Tenha certeza que você está na sua _mybranch_ branch antes de continuar.
+9. Crie um arquivo chamado `file1.txt` com seu nome.
+10. `Add` o arquivo e `commit` com essa mudança.
+11. Use `git log --oneline --graph` para ver sua branch apontando para o novo commit.
+12. Troque de volta para a branch chamada _master_.
+13. Use `git log --oneline --graph` e revise como o commit que você fez na  _mybranch_ branch está faltando na _master_ branch.
+14. Crie um novo arquivo chamado `file2.txt` e commit esse arquivo.
+15. Use `git log --oneline --graph --all` para ver sua branch apontando para o novo commit, e agora as duas branches possuem diferentes commits nelas.
+16. Troque para a sua branch _mybranch_.
+17. O que aconteceu no seu diretório de trabalho? Você consegue ver o seu `file2.txt`?
+18. Use `git diff mybranch master` ou `git diff mybranch main` para ver as diferenças entre as duas branches.
 
-## Useful commands
+## Comandos Úteis
 
 - `git switch`
 - `git switch -c`
 - `git log --oneline --graph`
 - `git branch`
 - `git diff`
+- `git checkout`
