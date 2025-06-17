@@ -1,42 +1,21 @@
----
-maintainer: JKrag
----
-# Git Katas
+# Página de Material de Git e Github
 
-## Quick Start
+Primeiramente, quero agradecer a **eficode-academy** que por meio do seu repositório [git-katas](https://github.com/eficode-academy/git-katas.git) e suas ferramentas me mostrou uma maneira simples de estruturar exercícios sobre git e github para o meu mini-curso. 
 
-### In the Cloud
+Este repositório é uma coleção de exercícios de Git e exercícios exemplo de aulas.
 
-[![Open in Cloud Shell](https://gstatic.com/cloudssh/images/open-btn.svg)](https://console.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https://github.com/praqma-training/git-katas.git)
+Os exercícios são designados para serem usados quando nós estamos ensinando cursos sobre Git. Você deveria ser capaz de usar eles como exercícios independentes que vão permiter que você mantenha suas habilidades de Git afiadas.
 
-### On Your Local Machine
+Exercícios começando com _básico_ são relativamente fáceis - outros exercícios são maiores em dificuldade.
 
-![Quick Start](/images/quickstart.gif)
+Para ter uma visão geral dos exercícios deste repositório, veja [Overview.md](Overview.md).
 
-- Clone this repository
-- Go into the folder you want to solve an exercise in
-- Run the `setup.sh` script
-- Consult the README.md in that folder to get a description of the exercise
+Sinta-se livre para usar esses exercícios, essa é a razão deles serem públicos!
 
-## Purpose of Git Katas
+## Caminho de Aprendizado Sugestionado
 
-This repository is a collection of Git exercises.
-The concept is stolen without shame from [Schauderhaft.de](http://blog.schauderhaft.de/gitkata/).
-Unfortunately, they have not maintained the system - and we need more good Git exercises.
-
-The exercises are designed for use when we are teaching Git courses. You should be able to use them as self-contained exercises that will allow you to keep your Git skills sharp.
-
-Exercises starting with _basic_ are entry-level - other exercises vary greatly in difficulty.
-
-To get an overview of the exercises in here look in [Overview.md](Overview.md).
-
-Feel free to use these exercises, that's why they're public!
-
-## Suggested Learning Path
-
-If you are coming to this repository for some basic Git knowledge, we recommend going through the exercises in the following order.
-This is the order that Jan Krag at Praqma teaches Git and might change over time. There are more exercises than this, but these should take you through
-everything you need to be able to use Git effectively in your day to day life.
+Se você está chegando de paraquedas nesse repositório, em busca de algum conhecimento básico de Git, é recomendável seguir através dessa ordem de exercícios.
+Esta ordem de exercícios é a mais seguida atualmente mas pode mudar com o tempo ou por opinião do programador, Podem parecer poucos exercícios mas eles devem ensinar tudo que você precisa para ser capaz de usar o Git eficientemente no seu dia a dia. 
 
 - [Basic Commits](./basic-commits/README.md)
 - [Basic Staging](./basic-staging/README.md)
@@ -55,25 +34,19 @@ everything you need to be able to use Git effectively in your day to day life.
 - [Rebase using autosquash](./rebase-interactive-autosquash/README.md)
 - [Basic Stashing](./basic-stashing/README.md)
 
-See [Overview.md](Overview.md) for a more complete list and suggested order.
+Visite [Overview.md](Overview.md) para uma lista mais completa e sugestões.
 
-## Contributing
+## Contribuição 
 
-If you miss exercises or find errors in any of them, feel free to improve them and make a pull request.
+Se você encontrar erros ou sentir falta de um exercício específico, sinta-se livre para melhorar eles e fazer um **pull request**.
 
-You can also make an issue so we notice an opportunity to improve!
+Você também pode fazer um **issue**, para expôr uma oportunidade de melhora!
 
-Thank you!
+Obrigado!
 
-### Celebrating success
+## Folha de colas
 
-On September 6th, 2023, we reached the milestone of having 1000 stars on GitHub. Thank you all for your support! This repository would not be where it is without the valuable contributions from the community.
-
-![1000 stars](/docs/1000stars-git-katas.png)
-
-## Cheatsheet
-
-A collection of useful commands to use throughout the exercises:
+Uma coleção de comandos úteis para usar nos exercícios:
 
 ```shell
 # Initializing an empty git repository.
@@ -174,14 +147,14 @@ git config --global alias.lol "log --graph --oneline --all"
 git lol     # Does a "git log --graph --oneline --all"
 ```
 
-## Testing
+## Testando
 
-There is a very small test that you can run in powershell or bash.
-It is contained in the scripts `test.sh` and `test.ps1`.
+Há um teste muito pequeno que você pode executar em um powershell ou bash.
+Ele está contido nos scripts `test.sh` and `test.ps1`.
 
-### Cleanup
+### Limpeza
 
-You can remove testing artifacts, `exercise` directories, with the git clean command:
+Você pode remover arquivos de teste, `exercise` diretórios, com o git clean command: 
 
 ```sh
 git clean -ffdX
