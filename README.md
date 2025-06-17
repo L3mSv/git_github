@@ -14,7 +14,7 @@ Sinta-se livre para usar esses exercícios, essa é a razão deles serem públic
 
 ## Caminho de Aprendizado Sugestionado
 
-Se você está chegando de paraquedas nesse repositório, em busca de algum conhecimento básico de Git, é recomendável seguir através dessa ordem de exercícios.<br/>
+Se você está chegando de paraquedas nesse repositório, em busca de algum conhecimento básico de Git, é recomendável seguir através dessa ordem de exercícios.<br/><br/>
 Esta ordem de exercícios é a mais seguida atualmente mas pode mudar com o tempo ou por opinião do programador, Podem parecer poucos exercícios mas eles devem ensinar tudo que você precisa para ser capaz de usar o Git eficientemente no seu dia a dia.<br/>
 
 - [Basic Commits](./basic-commits/README.md)
