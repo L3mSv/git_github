@@ -1,5 +1,7 @@
 # Página de Material de Git e Github
 
+## Introdução 
+
 > [!NOTE]
 > Primeiramente, quero agradecer a **eficode-academy** que por meio do seu repositório [git-katas](https://github.com/eficode-academy/git-katas.git) e suas ferramentas me mostrou uma maneira simples de estruturar exercícios sobre git e github para o meu mini-curso. 
 
