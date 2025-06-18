@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# kata: basic-staging
+# basic-staging
 
 # Include utils
 source ../utils/utils.sh
