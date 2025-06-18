@@ -82,14 +82,6 @@ Obrigado!
 
 ## Folha de colas
 
-### Limpeza
-
-Você pode remover arquivos de teste, `exercise` diretórios, com o git clean command: 
-
-```sh
-git clean -ffdX
-```
-
 Uma coleção de comandos úteis para usar nos exercícios:
 
 ```shell
@@ -189,4 +181,12 @@ git log --graph --oneline --all # Show a nice graph of the previous commits
 git config --global alias.lol "log --graph --oneline --all"
 ## Using the alias
 git lol     # Does a "git log --graph --oneline --all"
+```
+
+### Limpeza
+
+Você pode remover arquivos de teste, `exercise` diretórios, com o git clean command: 
+
+```sh
+git clean -ffdX
 ```
