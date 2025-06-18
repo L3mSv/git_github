@@ -9,7 +9,7 @@ No git nós temos 3 diferentes áreas de trabalho:
 * O repositório, onde todo commit termina, construindo seu histórico. Para subir as suas mudanças da área de preparação _(staging area)_ você deve executar o comando `git commit`. 
 
 
-O arquivo pode ter mudanças em no diretório de trabalho e na área de preparação ao mesmo tempo.
+O arquivo pode ter mudanças no diretório de trabalho e na área de preparação ao mesmo tempo.
 Essas mudanças não precisam ser as mesmas.
 
 Nós também vamos trabalhar com `git restore` para restaurar mudanças da área de preparação do arquivo, e `git checkout` para retornar um arquivo ao seu estado anterior.
@@ -20,16 +20,16 @@ Nós também vamos trabalhar com `git restore` para restaurar mudanças da área
 
 ## Tarefa
 
-Você vive no seu próprio repositório. Nele existe um arquivo chamado `file.txt`
+Você está no seu próprio repositório. Nele existe um arquivo chamado `file.txt`
 
 1. Qual é o conteúdo de `file.txt`?
-2. Sobrescreva o conteúdo de `file.txt`: `echo 2 > file.txt` para mudar o estado do seu arquivo no diretório de trabalho (ou `sc file.txt '2'` no PowerShell)
+2. Sobrescreva o conteúdo de `file.txt`: `echo 2 > file.txt` para mudar o estado do seu arquivo no diretório de trabalho <br/>(ou `sc file.txt '2'` no PowerShell)
 3. O que `git diff` diz a você?
 4. O que `git diff --staged` diz a você? porque isto está em branco?
 5. Execute `git add file.txt` para mover as suas mudanças do diretório de trabalho para a área de preparação
 6. O que `git diff` diz a você?
 7. O que `git diff --staged` diz a você?
-8. Sobrescreva o conteúdo do `file.txt`: `echo 3 > file.txt` para mudar o estado do seu arquivo no diretório de trabalho (or `sc file.txt '3'` no PowerShell)
+8. Sobrescreva o conteúdo do `file.txt`: `echo 3 > file.txt` para mudar o estado do seu arquivo no diretório de trabalho <br/>(or `sc file.txt '3'` no PowerShell)
 9. O que `git diff` diz a você?
 10. O que `git diff --staged` diz a você?
 11. Explique o que está acontecendo 
