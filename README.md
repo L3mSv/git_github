@@ -15,6 +15,39 @@ Para ter uma visão geral dos exercícios deste repositório, veja [Overview.md]
 
 Sinta-se livre para usar esses exercícios, essa é a razão deles serem públicos!
 
+## Testando
+
+Há um teste muito pequeno que você pode executar em um powershell ou bash.
+Ele está contido nos scripts `test.sh` and `test.ps1`.
+
+## Erros Comuns 
+
+### Powershell bloqueando Scripts
+>Caso você esteja usando o Powershell e ao executar `.\setup.ps1` receba este erro:
+>
+>``` powershell
+>PS D:\git_github\git_github\basic-staging> .\setup.ps1    
+>.\setup.ps1 : O arquivo D:\git_github\git_github\basic-staging\setup.ps1 não pode ser carregado porque a execução de scripts foi desabilitada neste sistema. Para obter       
+>mais informações, consulte about_Execution_Policies em https://go.microsoft.com/fwlink/?LinkID=135170.
+>No linha:1 caractere:1
+>+ .\setup.ps1
+>+ ~~~~~~~~~~~
+>    + CategoryInfo          : ErrodeSegurança: (:) [], PSSecurityException
+>    + FullyQualifiedErrorId : UnauthorizedAccess
+>```
+>Siga estes passos:
+>1. Execute o seu PowerShell como Administrador
+>2. Digite o comando `Set-ExecutionPolicy` RemoteSigned
+>3. Digite *a* ou *s*, e logo em seguida *Enter* neste formato de pergunta:
+>
+>``` powershell
+>A política de execução ajuda a proteger contra scripts não confiáveis. A alteração da política de execução pode
+>implicar exposição aos riscos de segurança descritos no tópico da ajuda about_Execution_Policies em
+>https://go.microsoft.com/fwlink/?LinkID=135170. Deseja alterar a política de execução?
+>[S] Sim  [A] Sim para Todos  [N] Não  [T] Não para Todos  [U] Suspender  [?] Ajuda (o padrão é "N"): s
+>PS C:\Windows\system32> cd D:\git_github\git_github\basic-staging
+>```
+
 ## Caminho de Aprendizado Sugestionado
 
 Se você está chegando de paraquedas nesse repositório, em busca de algum conhecimento básico de Git, é recomendável seguir através dessa ordem de exercícios.<br/><br/>
@@ -38,6 +71,14 @@ Esta ordem de exercícios é a mais seguida atualmente mas pode mudar com o temp
 - [Basic Stashing](./basic-stashing/README.md)
 
 Visite [Overview.md](Overview.md) para uma lista mais completa e sugestões.
+
+### Limpeza
+
+Você pode remover arquivos de teste, `exercise` diretórios, com o git clean command: 
+
+```sh
+git clean -ffdX
+```
 
 ## Contribuição 
 
@@ -148,17 +189,4 @@ git log --graph --oneline --all # Show a nice graph of the previous commits
 git config --global alias.lol "log --graph --oneline --all"
 ## Using the alias
 git lol     # Does a "git log --graph --oneline --all"
-```
-
-## Testando
-
-Há um teste muito pequeno que você pode executar em um powershell ou bash.
-Ele está contido nos scripts `test.sh` and `test.ps1`.
-
-### Limpeza
-
-Você pode remover arquivos de teste, `exercise` diretórios, com o git clean command: 
-
-```sh
-git clean -ffdX
 ```
