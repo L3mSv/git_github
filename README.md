@@ -72,14 +72,6 @@ Esta ordem de exercícios é a mais seguida atualmente mas pode mudar com o temp
 
 Visite [Overview.md](Overview.md) para uma lista mais completa e sugestões.
 
-### Limpeza
-
-Você pode remover arquivos de teste, `exercise` diretórios, com o git clean command: 
-
-```sh
-git clean -ffdX
-```
-
 ## Contribuição 
 
 Se você encontrar erros ou sentir falta de um exercício específico, sinta-se livre para melhorar eles e fazer um **pull request**.
@@ -89,6 +81,14 @@ Você também pode fazer um **issue**, para expôr uma oportunidade de melhora!
 Obrigado!
 
 ## Folha de colas
+
+### Limpeza
+
+Você pode remover arquivos de teste, `exercise` diretórios, com o git clean command: 
+
+```sh
+git clean -ffdX
+```
 
 Uma coleção de comandos úteis para usar nos exercícios:
 
