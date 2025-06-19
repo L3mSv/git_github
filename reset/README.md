@@ -1,26 +1,27 @@
-# Git katas: Git reset
-We can manipulate the History very much so. We should only ever tinker with our local history. As publicly release commits must expect to be immutable.
+# Git reset
 
-We use reset to unstage change, but we can also do many more different things.
+Nós podemos manipular o histórico da forma que quiesermos. Nós devemos sempre memxer com o nosso histórico local. Já que os commits devem ser imutáveis
+
+Usamos reset para desfazer mudanças, mas também podemos fazer muitas outras coisas diferentes.
 
 ## Setup
 
-1. Run `source setup.sh` (or `.\setup.ps1` in PowerShell)
+1. Execute `source setup.sh` (ou `.\setup.ps1` no PowerShell)
 
 ## Task
 
-1. How does your working directory look like?
-2. What does your log look like? What does your stage look like?
-3. Try to run `git reset --soft HEAD~1`
-4. What happens to your working directory, your log and your stage?
-5. Run `git reset --mixed HEAD~1`
-6. What happens to your working directory, your log and your stage?
-7. Run `git reset --hard HEAD~1`
-8. What happens to your working directory, your log and your stage?
-9. Now try to use `git revert HEAD~1`
-10. What happens to your working directory, your log and your stage?
+1. Como seu diretório de trabalho parece? 
+2. Como se parece o seu log? Como se parece sua área de preparação _(staging area)_? 
+3. Tente executar `git reset --soft HEAD~1`
+4. Como se parece seu diretório de trabalho, seu log e sua área de preparacação _(staging area)_? 
+5. Execute `git reset --mixed HEAD~1`
+6. Como se parece seu diretório de trabalho, seu log e sua área de preparacação _(staging area)_? 
+7. Execute `git reset --hard HEAD~1`
+8. Como se parece seu diretório de trabalho, seu log e sua área de preparacação _(staging area)_? 
+9. Agora tente usar `git revert HEAD~1`
+10. Como se parece seu diretório de trabalho, seu log e sua área de preparacação _(staging area)_? 
 
-## Useful commands
+## Comandos Úteis
 
 - `git log --oneline`
 - `git commit --amend`
@@ -30,10 +31,10 @@ We use reset to unstage change, but we can also do many more different things.
 - `git reset --hard`
 - `git revert`
 
-## Further explanation
+## Explicação Rápida
 
-The following is taken from Recap section of [https://git-scm.com/book/en/v2/Git-Tools-Reset-Demystified].
-The reset command overwrites these three trees in a specific order, stopping when you tell it to:
-1. Move what the branch HEAD points to (stop here if --soft)
-2. Make the stage look like HEAD (stop here unless --hard)
-3. Make the working directory look like the stage
+O seguinte foi retirado da seção Recapitulação de [https://git-scm.com/book/en/v2/Git-Tools-Reset-Demystified].
+O comando reset substitui essas três árvores em uma ordem específica, parando quando você ordena:
+1. Move para onde o branch HEAD aponta (parar aqui se --soft)
+2. Faz a área de preparação _(staging area)_ se parecer com o HEAD (pare aqui, a menos que seja --hard)
+3. Faz o diretório de trabalho se parecer com a área de preparação _(staging area)_
