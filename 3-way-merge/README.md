@@ -1,26 +1,27 @@
-# Git Kata: 3-Way Merge
+# 3-Way Merge
 
 ## Setup
 
-1. Run `source setup.sh` (or `.\setup.ps1` in PowerShell)
+1. Execute `source setup.sh` (ou `.\setup.ps1` no PowerShell)
 
-## The task
+## Tarefa
 
-You again live in your own branch, this time we will be doing a bit of juggling with branches, to show how lightweight branches are in git.
+Você está na sua própria branch, dessa vez nós vamos usar um tipo de mesclagem específico, conhecido como merge de 3 vias ou _(3-Way Merge)_, para mostrar que o uso de mesclagem de branches não é tão difícil quando parece
 
-1. Create a branch called greeting and switch to it
-2. Edit the greeting.txt to contain your favorite greeting
-3. Add greeting.txt files to the staging area
+1. Crie uma branch chamada greeting e troque para ela
+2. Altere o conteúdo de `greeting.txt` para conter o seu tipo de saudação favorito
+3. Adicione `greeting.txt` a área de preparação _(staging area)_
 4. Commit
-5. Switch back to the master branch
-6. Create a file README.md with information about this repository
-7. Add the README.md file to staging area and make the commit
-8. What is the output of `git log --oneline --graph --all`?
-9. Diff the branches
-10. Merge the greeting branch into master
-11. What is the output of `git log --oneline --graph --all` now? Observe the extra merge commit created with the message "Merge branch 'greeting'".
+5. Volte para a branch master
+6. Crie um arquivo README.md com informações sobre este repositório
+7. Adicione o arquivo README.md para a área de preparação e faça o seu commit 
+8. Qual é a saída de `git log --oneline --graph --all`?
+9. Diff as branches
+10. Merge a branch greeting na branch master
 
-## Useful commands
+11. Qual é a saída de `git log --oneline --graph --all` agora? Observe o extra merge commit criado com a mensagem "Merge branch 'greeting'".
+                                                        
+## Comandos Úteis
 
 - `git branch`
 - `git branch <branch-name>`
