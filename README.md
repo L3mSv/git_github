@@ -1,6 +1,7 @@
 # Página de Material de Git e Github
 
-![README](https://github.com/user-attachments/assets/49331e55-72dc-4dfc-aa6e-13356b032866)
+<img src="images/README.gif" width="300" />
+<img src="images/README.gif" height="200" />
 
 ## Introdução 
 
