@@ -1,6 +1,6 @@
 # Página de Material de Git e Github
 
-<img src="images/README.gif" height="500" />
+<img src="images/README.gif" height="500" widht="500"/>
 
 ## Introdução 
 
