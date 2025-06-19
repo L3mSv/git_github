@@ -1,23 +1,24 @@
-# gitkatas
-## Kata 7: Reordering history
-The commits here have obviously been made by a mad man.
-Unfortunately they actually contain useful information - it's just that the history is weird.
-You should fix this such that our `git log` looks great!
+# Reordenando o Histórico
 
 ## Setup
 
-1. Run `source setup.sh` (or `.\setup.ps1` in PowerShell)
+1. Execute `source setup.sh` (ou `.\setup.ps1` no PowerShell)
 
-## Task
+## Tarefa
 
-Reorder the history such that it actually makes sense - add the files in the order that matches their name.
+Os commits aqui foram obviamente feitos por um cara de mal humor.
+Infelizmente, eles estão contendo informações úteis - pórem o histórico está com um aspecto estranho.
+Você deve consertar isso de tal forma que nosso `git log` pareça bom!
 
-1. Use `git log --oneline --graph` to view the commits
-2. Also try `git reflog` to view the commits. `git reflog` defaults to `git reflog show` and this is an alias for `git log -g --abbrev-commit --pretty=oneline`
-3. Use `git rebase -i <after-this-commit>` to reorder the commits. There are commments in the file you edit that explain the commands available.
-4. Use `git log --oneline --graph` to view the result
+Reordene o histórico de uma maneira que faça sentido - adicione os arquivos na ordem que combine com seus nomes
 
-### useful commands
+1. Use `git log --oneline --graph` para ver os commits 
+2. Também tente `git reflog` para ver os commits. `git reflog` padrão  para `git reflog show` and isso é um alias para `git log -g --abbrev-commit --pretty=oneline`
+3. Use `git rebase -i <after-this-commit>` para reordenar os commits. 
+Há comentários nos arquivos que você pode editar para explicarem os comandos disponíveis
+4. Use `git log --oneline --graph` para ver os resultados
+
+### Comandos Úteis
 
 - `git rebase -i <after-this-commit>`
 - `git log --oneline --graph`
