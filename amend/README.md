@@ -1,25 +1,26 @@
-# Git kata: Amending commits
-When we are working, we make a lot of commits.
-Sometimes we just forget something obvious that we want to fix quickly.
+# Amending commits
 
-`git commit --amend` allows us to do that - tinker with the last commit we made.
+Quando nós estamos trabalhando, nós fazemos vários commits.
+Algumas vezes apenas esquecemos de algo óbvio que nós queriamos consertar rapidamente.
 
-You can use `git log -p` or `git show` to inspect the contents of commits and file changes that were added to the commits.
+`git commit --amend` nos permite fazer isso - mexer no último commit que fizemos.
+
+Você pode usar `git log -p` ou `git show` para inspecionar o conteúdo dos commits e alterações em arquivos que foram feitas nos commits adicionados.
 
 ## Setup:
 
-1. Run `source setup.sh` (or `.\setup.ps1` in PowerShell)
+1. Execute `source setup.sh` (ou `.\setup.ps1` no PowerShell)
 
-## The task
+## Tarefa
 
-1. What does `git status` tell us?
-2. What does `git log -p` tell us?
-3. Stage the addition of bar.txt
-4. Run `git commit --amend`
-5. What happened? What does `git log -p` tell us?
-6. What happens if you run `git commit --amend` again?
+1. O que `git status` nos diz?
+2. O que `git log -p` nos diz?
+3. Adicione bar.txt a área de preparação _(staging area)_
+4. Execute `git commit --amend`
+5. O que aconteceu? O que `git log -p` nos diz?
+6. E se você executa-se `git commit --amend` novamente?
 
-## Useful commands
+## Comandos Úteis
 
 - `git add`
 - `git log --oneline --graph`
