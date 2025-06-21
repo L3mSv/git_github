@@ -1,21 +1,19 @@
-# gitkatas
+# Commit on wrong branch
 
 ## Setup
 
 1. Run `source setup.sh` (or `.\setup.ps1` in PowerShell)
 
-## Kata 5: Commit on wrong branch
+## Tarefa
 
-This kata was shameless ripped off from [Git Katas](http://blog.schauderhaft.de/gitkata/)
+Você está trabalhando muito duro no branch master.
+Parte do seu trabalho já está comprometida. É quando seu chefe entra com uma solicitação urgente.
 
-You are working really hard on the master branch.
-Part of your work is already committed. This is when your boss comes in with an urgent request.
+Como seu HEAD atual não está pronto para o horário nobre, você faz backup de um commit e inicia uma nova branch chamada "quickfix". Você faz o que seu chefe quiser e envia as alterações para essa nova branch.
 
-Since your current HEAD is not ready for prime time you backup one commit, and start a new branch named 'quickfix'. You do whatever your boss wants and commit the changes to that new branch.
+É aí que você percebe que fez uma pequena bagunça com suas branches.
 
-That's when you realize you created a minor mess with your branches.
-
-Currently your commits look like this
+Atualmente, seus commits estão assim:
 
 ```text
          master
@@ -29,7 +27,7 @@ remote     ^
         quickfix
 ```
 
-But you want it to look like this:
+Mas você quer que fique assim:
 
 ```text
          remote
@@ -41,21 +39,19 @@ But you want it to look like this:
                   HEAD
 ```
 
-Git ahead!
+Vá em frente!
 
-Note: since the `B` in the current and in the target structure don't have the same parent they can't be literally the same commit.
+Observação: como o `B` na estrutura atual e na estrutura de destino não têm o mesmo pai, eles não podem ser literalmente o mesmo commit.
 
-## The task
+1. Use `git log --oneline --graph --all` para ver todas as branches e seus commits.
+2. Copie `C` para `master` antes `B` por rebase `quickfix` no `master`.
+3. Faça uma nova branch (`changes-including-B`) fora da sua `master` então nós podemos voltar a trabalhar na `B`.
+4. Reset `master` de volta para `C`.
+5. Delete a branch `quickfix`.
+6. Push `master`. Você não pode fazer isso no exercício de treinamento.
+7. Você pode mesclar a branch `changes-including-B` para `master` e delete `changes-including-B` ou apenas troque para `changes-including-B` e trabalhe lá.
 
-1. Use `git log --oneline --graph --all` to view all the branches and their commits.
-2. Copy `C` onto `master` before `B` by rebasing `quickfix` on `master`.
-3. Make a new branch (`changes-including-B`) off of our `master` so we can keep working on `B`.
-4. Reset `master` back to `C`.
-5. Delete the `quickfix` branch.
-6. Push `master`. You can't do this in the training exercise.
-7. You can merge the `changes-including-B` branch to `master` and delete `changes-including-B` or just switch to `changes-including-B` and work there.
-
-## Useful commands
+## Comandos Úteis
 
 - `git log --oneline --graph --all`
 - `git switch <branch-name>`
