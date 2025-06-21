@@ -1,62 +1,63 @@
-# Git Kata: Basic Cherry Pick
+# Basic Cherry Pick
 
-In this task we want have two branches, master and feature. We have worked and progressed on both branches seperately. However, there are a few changes on the feature branch that we want to take and add onto the master branch. Without getting the entire changeset from the feature branch.
+Nessa tarefa nós queremos ter duas branches, master e feature. Nós temos trabalhado e progredido em ambas as branches separadamente. No entanto, há algumas mudanças na feature branch que nós queremos tirar e adicionar na master branch. Sem pegar o conjunto de mudanças por inteiro da feature branch.
 
-Git has functionality for this "take-just-these-changes" and it is called `cherry-pick`.
-You tell Git which commits you would like to cherry pick and Git will add those commits onto your branch's commit history.
+Git tem uma funcionalidade para isso "pegue-apenas-essas-mudanças" e isso é chamado de `cherry-pick`.
 
-Git can cherry pick either a single commit or a range of commits from a branch.
+Você diz ao Git com quais commits você gostaria realizar o `cherry pick` e o Git vai adicionar esses commits no histório de commits da sua branch.
+
+O Git pode realizar o `cherry pick` ou em um único commit ou em um conjunto de commits da branch.
 
 ## Setup:
 
-1. Run `source setup.sh` (or `.\setup.ps1` in PowerShell)
+1. Execute `source setup.sh` (ou `.\setup.ps1` no PowerShell)
 
-## The task
+## Tarefa
 
-
-We currently have this git history in our exercise repository :
+Nós atualmente temos esse histórico do git no nosso repositório de exercício: 
 
     A - B - C - D         master
           \
             E - F - G - H feature
 
-As you can see the `feature` branch and the `master` branch have progressed with different commits. We want to cherry pick the commits F and G and add them onto the master branch, so that our Git history looks like this:
+Como você pode ver a `feature` branch e a `master`branch tem progredido com diferentes commits. Nós queremos realizar o *cherry pick* nos commits F e G e adicionar eles na master branch, isso fará com que o nosso histórico do Git se pareça assim: 
 
     A - B - C - D - F - G master
           \
             E - F - G - H feature
 
-1. Use `git log --oneline --graph --all` to look at the history
-2. Use `cat` to view the content of `names.txt`. This file is changed in commit F
-3. Use `cat` to view the content of `sentence.txt`. This file is changed in commit G
-4. Use `git cherry-pick <commit_hash_F>` to cherry pick just the F commit onto your branch
-5. Use `git log --oneline` to see the change to the history and that commit F should now be the newest commit on the master branch
-6. Use `cat` to view the content of `names.txt` look how it has now changed!
-7. Use `git reset --hard HEAD^` to delete that cherry picking from the history so that we can now try again and cherry pick a range of commits
-8. Use `git log --oneline --graph` to check the the cherry picked commit is now removed from the branch
-9. We are now essentially back to where we began, now use `git cherry-pick <commit_hash_F>^..<commit_hash_G>` to cherry pick the range of commits from F to G (the two commits). Pay close attention and do not forget the caret `^` symbol after the first commit hash (see the section *Useful Note* below to understand why this is needed)
-10. Use `git log --oneline --graph` to view the history
-11. Use `cat` to view the contents of `names.txt` and `sentence.txt` look how they have changed!
-12. How many commits were added due to the cherry pick?
+1. Use `git log --oneline --graph --all` para dar uma olhada no histórico.
+2. Use `cat` para ver o conteúdo de `names.txt`. Esse arquivo foi alterado no commit F.
+3. Use `cat` para ver o conteúdo de `sentence.txt`. Esse arquivo foi alterado no commit G.
+4. Use `git cherry-pick <commit_hash_F>` para realizar o *cherry pick* apenas no commit F na sua branch
+5. Use `git log --oneline` para ver as mudanças no histórico e aquele commit commit F deveria ser agora o mais novo commit na master branch
+6. Use `cat` para ver o conteúdo de `names.txt` olhe agro que está modificado!
+7. Use `git reset --hard HEAD^` para excluir aquele *cherry picking* a partir do histórico para que possamos tentar novamente e selecionar uma série de commits
+8. Use `git log --oneline --graph` para verificar se o commit selecionado foi removido do branch
+9. Agora estamos essencialmente de volta ao ponto de partida. Agora, use `git cherry-pick <commit_hash_F>^..<commit_hash_G>` para selecionar o intervalo de commits de F a G (os dois commits). Preste bastante atenção e não se esqueça do símbolo `^` após o hash do primeiro commit (consulte a seção *Nota Útil* abaixo para entender por que isso é necessário).
+10. Use `git log --oneline --graph` para ver o histórico
+11. Use `cat` para ver o conteúdo de `names.txt` e `sentence.txt` olhe agora que eles foram modificados!
+12. Quantos commits foram adicionados devido ao *cherry pick*?
 
-## Useful Note
 
-When using range of commits with the cherry pick command, the first commit hash specified for the oldest (left side of the range) is not actually included in the cherry pick, as in that commit is excluded but all others between and including the newest commit are.
+## Nota Útil
 
-So to bypass this issue it is useful to use the caret `^` after the first commit hash to tell Git that you want the commit BEFORE this commit, therefore including it in the cherry pick process.
+Ao usar um intervalo de commits com o comando `cherry pick`, o primeiro hash de commit especificado para o mais antigo (lado esquerdo do intervalo) não é incluído no `cherry pick`, ou seja, esse commit é excluído, mas todos os outros entre e incluindo o commit mais recente são.
 
-For example
+Portanto, para contornar esse problema, é útil usar o simbolo `^` após o primeiro hash de commit para informar ao Git que você deseja o commit ANTES deste commit, incluindo-o no processo de cherry pick.
+
+Por exemplo
 
     git cherry-pick ABCD..EFGH
 
-would not include the commit ABCD, instead you should add a caret symbol to the end of the ABCD to tell git to include it, like this:
+não incluiria o commit ABCD, em vez disso você deve adicionar um símbolo de circunflexo `^` ao final do ABCD para dizer ao git para incluí-lo, assim:
 
     git cherry-pick ABCD^..EFGH
 
-Reference: https://www.tollmanz.com/git-cherry-pick-range/
-Reference: https://git-scm.com/docs/git-cherry-pick
+Referência: https://www.tollmanz.com/git-cherry-pick-range/
+Referência: https://git-scm.com/docs/git-cherry-pick
 
-## Useful commands
+## Comandos Úteis
 - `git cherry-pick <ref>`
 - `git reset --hard <ref>`
 - `git log --oneline --graph --all`
