@@ -1,32 +1,32 @@
-# Git kata: Restoring files
+# Restoring files
 
-We all make mistakes. Sometimes we make changes we'd rather not have made, or accidentally stage changes we didn't intend to stage.
-This is where `git restore` comes into play.
+Todos cometemos erros. Às vezes, fazemos alterações que preferiríamos não ter feito ou, acidentalmente, preparamos alterações que não pretendíamos.
+É aqui que o `git restore` entra em ação.
 
 ## Setup
 
-1. Run `source setup.sh` (or `.\setup.ps1` in PowerShell)
+1. Execute `source setup.sh` (ou `.\setup.ps1` no PowerShell)
 
-## The task
+## Tarefa
 
-1. Call `git status`\
- What changes were made to this repository?
-2. Restore the `foo.txt` file using `git restore foo.txt`
-3. Call `git status` again\
- What happened to `foo.txt`?
-4. Unstage the changes to `bar.txt` using `git restore --staged bar.txt`
-5. Call `git status` once more\
- What happened to `bar.txt`?
-6. Restore the `bar.txt` file using `git restore bar.txt`
-7. Call `git status` once more\
- What happened to `bar.txt`?
-8. Call `git log --oneline`\
- Do you spot the tag?
-9. Restore `foo.txt`'s contents to their previous version using `git restore -s v1.0.0 foo.txt`
-10. Call `git status` one last time\
- What happened to `foo.txt`?
+1. Execute `git status`\
+ Que mudanças foram feitas no repositório?
+2. Restaure o arquivo `foo.txt` usando  `git restore foo.txt`
+3. Execute `git status` novamente\
+ O que aconteceu com `foo.txt`?
+4. Desfaça as mudanças do `bar.txt` usando `git restore --staged bar.txt`
+5. Execute `git status` mais uma vez\
+ O que aconteceu com `bar.txt`?
+6. Restaure o arquivo `bar.txt` usando `git restore bar.txt`
+7. Execute `git status` mais uma vez\
+ O que aconteceu com `bar.txt`?
+8. Execute `git log --oneline`\
+Você viu a tag?
+9. Restaure o conteúdo de `foo.txt` para sua última versão usando `git restore -s v1.0.0 foo.txt`
+10. Execute `git status` mais uma última vez\
+ O que aconteceu com `foo.txt`?
 
-## Useful commands
+## Comandos Úteis
 
 - `git status`
 - `git log --oneline`
