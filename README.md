@@ -55,6 +55,8 @@ Ele está contido nos scripts `test.sh` and `test.ps1`.
 Se você está chegando de paraquedas nesse repositório, em busca de algum conhecimento básico de Git, é recomendável seguir através dessa ordem de exercícios.<br/><br/>
 Esta ordem de exercícios é a mais seguida atualmente mas pode mudar com o tempo ou por opinião do programador, Podem parecer poucos exercícios mas eles devem ensinar tudo que você precisa para ser capaz de usar o Git eficientemente no seu dia a dia.<br/>
 
+>ARRUMAR AQUI PARA FAZER A SEQUENCIA DE EXECS QUE VOU APRESENTAR NO CURSO PARA QUEM SO TA INTERESSADO NO CURSO
+
 - [Basic Commits](./basic-commits/README.md)
 - [Basic Staging](./basic-staging/README.md)
 - [Investigation](./investigation/README.md)
