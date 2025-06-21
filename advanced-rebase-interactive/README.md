@@ -1,32 +1,32 @@
-# gitkatas
-## Advanced interactive rebase
-You have worked on a new feature called Hello World.
-This features ends up being complete with both documentation and unit test, but there are a few problems.
-The history looks really messy, with lots of small half-finished steps, and there are things included that should never have been there.
+# Advanced interactive rebase
 
-You should fix this such that your `git log` looks great!
+Você tem trabalhado em uma ferramenta chamada *Hello World*.
+No fim, a ferramenta foi finalizada, com documentação e testes de unidades, mas restaram alguns problemas.
+O histórico ficou bastante bagunçado, com várias etapas deixadas pela metade e coisas inclusas que nem deveriam estar ali.
 
-To do this we will use our good friend `git rebase --interactive`
+Você deve consertar isso, de forma que o seu `git log` parece incrível!
 
-Luckily we have a release tag `v0.0` from just before we started the feature.
+Para fazer isso vamos usar nosso velho amigo `git rebase --interactive`
 
-As this is an advanced exercise, there are no specific steps to follow and no single solution.
+Felizmente nós usamos uma tag `v0.0` antes mesmo de começarmos a construir a ferramenta.
+
+Nesse exercício de nível avançado, não há passos específicos para seguir e não existe uma única solução.
 
 ## Setup:
 
-1. Run `source setup.sh` (or `.\setup.ps1` in PowerShell)
+1. Execute `source setup.sh` (ou `.\setup.ps1` no PowerShell)
 
-## Task
+## Tarefa
 
-1. Explore the repo and the history so you know what happened
-2. Use `git rebase --interactive v0.0` to let you edit the "recipe" for the entire feature development.
-3. Clean up the history such that it actually makes sense. Try to use as many of the rebase "features" (e.g. reword, squash, fixup, drop) as possible. You decide yourself if you want to rewrite the whole thing in one go, or apply a few changes first, then run a new `git rebase --interactive v0.0` to keep cleaning.
+1. Explore o repositório e o histórico para saber o que aconteceu
+2. Use `git rebase --interactive v0.0` para deixar você editar a "receita" para o desenvolvimento inteiro da ferramenta
+3. Limpe o histórico de forma que faça sentido. Tente usar quantos rebases "ferramentas" (e.g. reword, squash, fixup, drop) for possível. Você decide se você quer rescrever por inteiro de uma só vez, ou aplicar algumas mudanças primeiro, e então executar um novo `git rebase --interactive v0.0` para manter limpo. 
 
-### useful commands
+### Comandos Úteis
 
-- `ls -l`                 # list files
-- `tail -n +1 *`          # show content of all files
-- `git log --oneline`     # show history
-- `git log --stat`        # log which files changed
-- `git log --patch`       # log with diff
-- `git rebase -i <ref>`   # run the interactive rebase back to <ref>
+- `ls -l`                 # lista de arquivos
+- `tail -n +1 *`          # mostra o conteúdo de todos os arquivos
+- `git log --oneline`     # mostra o histórico
+- `git log --stat`        # mostra o log de quais arquivos foram alterados
+- `git log --patch`       # log com diff
+- `git rebase -i <ref>`  # executa um rebase interativo de volta pra <ref>
