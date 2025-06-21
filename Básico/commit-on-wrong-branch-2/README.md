@@ -1,26 +1,21 @@
-# Git kata: Commit on wrong branch II
-
-## The Story
-
-You develop a new feature on the branch `new-feature`. You have already
-implemented the first part of a feature, when you are notified of a critical
-bug that has to be fixed right away on the `master` branch.
-
-After the bug fix, you continue to work on the new feature. After you committed
-the second part of the feature, you realize that you have done your commit on
-the `master` branch instead of the feature branch.
+# Commit on wrong branch II
 
 ## Setup:
 
 1. Run `source setup.sh` (or `.\setup.ps1` in PowerShell)
 
-## The task
+## Tarefa
 
-1. Move the faulty commit from the `master` branch to the `new-feature` branch.
-2. How would you also bring the bugfix to your feature branch?
+Você desenvolve uma nova funcionalidade na branch `new-feature`. Você já implementou a primeira parte de uma funcionalidade quando é notificado sobre um bug crítico que precisa ser corrigido imediatamente na branch `master`.
 
-## Useful Commands
+Após a correção do bug, você continua trabalhando na nova funcionalidade. Após fazer o commit da segunda parte da funcionalidade, você percebe que fez o commit na branch `master` em vez da branch da funcionalidade.
 
-* `git reset HEAD~1` to move the current branch one step back. This has the consequence of _removing_ the newest commit from a branch
-* `git stash` to temporarily save your changes so that you can switch branches
-* `git cherry-pick` to add changeset from commit on current branch
+1. Mova o commit defeituoso da ramificação `master` para a ramificação `new-feature`.
+2. Como você faria para trazer a correção de bug para sua feature branch?
+
+
+## Comandos Úteis
+
+* `git reset HEAD~1` para mover o branch atual um passo para trás. Isso tem como consequência _remover_ o commit mais recente de um branch
+* `git stash` para temporariamente salvar suas mudanças para que você possa trocar entre suas branches
+* `git cherry-pick` para adicionar o conjunto de mudanças do commit para sua branch atual
